@@ -1,0 +1,6 @@
+learn about authentication using jwt 
+smtp (simple mail transfer protocol) using nodemailer 
+an application-layer protocol used to send and transfer email between servers. It relies on a TCP connection to port 25 to reliably deliver messages from a client to an email server.
+
+used nodemailer for smtp using brevo(smtp provider)
+
