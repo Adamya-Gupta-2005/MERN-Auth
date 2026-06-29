@@ -11,7 +11,7 @@ export const register = async (req, res) => {
     const { name, email, password } = req.body;
 
     if (!name || !email || !password) {
-        return res.json({ sucsess: false, message: "Missing details" });
+        return res.json({ success: false, message: "Missing details" });
     }
 
     try {
@@ -173,7 +173,7 @@ export const verifyEmail = async (req,res) => {
 //check if user is Authenticated
 export const isAuthenticated = async (req, res)=>{
     try {
-        return res.json({sucsess: true});
+        return res.json({success: true});
         
     } catch (error) {
         return res.json({success: false, message: error.message});
@@ -232,7 +232,7 @@ export const resetPassword = async (req,res)=>{
         }
 
         if(user.resetOtp === '' || user.resetOtp !== otp){
-            return res.json({sucsess: false,message: "Invalid OTP"});
+            return res.json({success: false,message: "Invalid OTP"});
         }
 
         if(user.resetOtpExpireAt < Date.now()){
